@@ -146,10 +146,11 @@ const App = () => {
       <div id="response-list">
         <PromptResponseList responseList={responseList} key="response-list"/>
       </div>
+      <div className="line" />
       { uniqueIdToRetry &&
         (<div id="regenerate-button-container">
           <button id="regenerate-response-button" className={isLoading ? 'loading' : ''} onClick={() => regenerateResponse()}>
-            Regenerate Response
+            Refresh response
           </button>
         </div>
         )
