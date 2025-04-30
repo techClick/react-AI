@@ -24,7 +24,7 @@ const PromptResponseList: FC<PromptResponseListProps> = ({ responseList }) => {
   return (
     <div className="prompt-response-list" ref={responseListRef}>
       {responseList.map((responseData) => (
-        <div className={"response-container " + (responseData.selfFlag ? 'my-question' : 'chatgpt-response')} key={responseData.id}>
+        <div className={"response-container " + (responseData.selfFlag ? 'my-question' : '')} key={responseData.id}>
           <img className="avatar-image" src={responseData.selfFlag ? MyImg : ChatGptImg} alt="avatar"/>
           <div className={(responseData.error ? 'error-response ' : '') + "prompt-content"} id={responseData.id}>
             { responseData.image &&
